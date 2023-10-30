@@ -20,7 +20,7 @@ spec:
           image: local/cicd-demo:latest # Image that will be used inside the container in the cluster
           imagePullPolicy: Never
           ports:
-            - containerPort: 8088 # The port that the container is running on in the cluster
+            - containerPort: 8080 # The port that the container is running on in the cluster
 ---
 apiVersion: v1
 kind: Service
@@ -34,5 +34,5 @@ spec:
     app: cicd-demo
   ports:
     - name: http
-      port: 8088 # The port that the service is running on in the cluster
-      targetPort: 8088
+      port: 8080 # The port that the service is running on in the cluster
+      targetPort: 8080
